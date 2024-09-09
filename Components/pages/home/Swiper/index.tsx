@@ -1,37 +1,30 @@
-"use client"
-import React from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Hero from "@/Components/pages/home/Hero"
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-// Import required modules
-import { Pagination } from 'swiper/modules';
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import Hero from "@/Components/pages/home/Swiper/Hero";
 
 export default function MySwiper() {
   return (
     <Swiper
       spaceBetween={30}
       pagination={{ clickable: true }}
-      modules={[Pagination]}
+      modules={[Pagination, Autoplay]}
       slidesPerView={1}
-      loop
+      loop={true}
+      speed={2500}
+      autoplay={{ delay: 500, pauseOnMouseEnter: true }}
       className="mySwiper"
     >
-      <SwiperSlide className=''>
+      <SwiperSlide>
+        <Hero />
+      </SwiperSlide>
 
-        <div>
-        <Hero/>
-        </div>
-      </SwiperSlide>
-    
       <SwiperSlide>
-      <Hero/>
+        <Hero />
       </SwiperSlide>
+
       <SwiperSlide>
-      <Hero/>
+        <Hero />
       </SwiperSlide>
     </Swiper>
   );

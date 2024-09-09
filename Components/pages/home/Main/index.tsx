@@ -1,7 +1,7 @@
 import React from "react";
-import Categories from "../Categories";
-import AllPlants from "../AllPlants";
-import BodyFlowers from "@/Components/BodyFlowers";
+import Categories from "./Categories";
+import AllPlants from "./AllPlants";
+import BodyFlowers from "@/Components/pages/home/Main/BodyFlowers";
 
 const Main = () => {
   return (
